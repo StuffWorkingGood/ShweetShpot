@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tool Suite | Sweet Spot 🍬</title>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">SWEET <span>SPOT</span> 🍬</a>
+    <div class="nav-links">
+      <a href="index.html#vip">VIP</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="#" id="logoutBtn">Log Out</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container dash">
+  <div class="dash-head">
+    <div>
+      <h2 class="brand-font" style="color: var(--yellow); font-size: 1.5rem;">Tool Suite</h2>
+      <p style="color: var(--muted); font-size: 0.88rem;">Welcome, <span id="userEmail">degen</span> 🍭 <span class="badge badge-yellow">DEMO DATA</span></p>
+    </div>
+    <a href="index.html#vip" class="btn btn-primary btn-sm">Unlock Live Data — Join VIP Waitlist</a>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="vf">📊 Value Finder</button>
+    <button class="tab" data-tab="hr">💣 HR Sweet Feed</button>
+    <button class="tab" data-tab="bb">🏀 Bucket Board</button>
+  </div>
+
+  <!-- VALUE FINDER -->
+  <div id="tab-vf">
+    <div class="filters">
+      <select id="vfSport">
+        <option value="all">All Sports</option>
+        <option value="MLB">MLB</option>
+        <option value="WNBA">WNBA</option>
+      </select>
+      <select id="vfBook">
+        <option value="all">All Books</option>
+        <option>DraftKings</option>
+        <option>FanDuel</option>
+        <option>BetMGM</option>
+        <option>Caesars</option>
+      </select>
+      <label style="color: var(--muted); font-size: 0.85rem;">Min EV %
+        <input type="number" id="vfMinEv" value="0" min="0" max="20" step="0.5" style="width: 70px; margin-left: 6px;">
+      </label>
+    </div>
+    <div class="table-wrap">
+      <table class="vf-table" id="vfTable">
+        <thead>
+          <tr><th>Player</th><th>Sport</th><th>Market</th><th>Line</th><th>Book</th><th>Odds</th><th>Fair Value</th><th>EV %</th><th>Units</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- HR FEED -->
+  <div id="tab-hr" style="display:none;">
+    <div class="filters">
+      <select id="hrTier">
+        <option value="all">All Tiers</option>
+        <option value="🔥 TOP PICK">🔥 TOP PICK</option>
+        <option value="🤖 MODEL EDGE">🤖 MODEL EDGE</option>
+        <option value="📊 MARKET EDGE">📊 MARKET EDGE</option>
+      </select>
+    </div>
+    <div class="hr-grid" id="hrGrid"></div>
+  </div>
+
+  <!-- BUCKET BOARD -->
+  <div id="tab-bb" style="display:none;">
+    <div class="table-wrap">
+      <table class="vf-table" id="bbTable">
+        <thead>
+          <tr><th>Player</th><th>Team</th><th>Market</th><th>Line</th><th>Proj</th><th>L10 Hit</th><th>DvP</th><th>Best Odds</th><th>EV %</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p class="disclaimer">Demo data shown for preview purposes. This site is for entertainment purposes only. 21+. If you or someone you know has a gambling problem, call 1-800-GAMBLER.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

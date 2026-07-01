@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log In | Sweet Spot 🍬</title>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">SWEET <span>SPOT</span> 🍬</a>
+    <div class="nav-links">
+      <a href="index.html#tools">Tools</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#vip">VIP</a>
+    </div>
+  </div>
+</nav>
+
+<div class="auth-box">
+  <h2 class="brand-font" style="color: var(--yellow); margin-bottom: 8px;">Welcome Back</h2>
+  <p style="color: var(--muted); margin-bottom: 22px; font-size: 0.92rem;">Log in to the Sweet Spot tool suite.</p>
+  <div class="demo-note">🧪 <strong>Demo mode:</strong> accounts aren't live yet — enter any email to preview the tools with sample data. Your email joins the VIP waitlist when we launch.</div>
+  <form id="loginForm">
+    <input type="email" id="email" placeholder="you@email.com" required>
+    <input type="password" id="password" placeholder="Password (anything works in demo)" required>
+    <button type="submit" class="btn btn-primary" style="width:100%;">Log In</button>
+  </form>
+  <p style="margin-top: 16px; font-size: 0.85rem; color: var(--muted);">New here? Same form — demo access is instant.</p>
+</div>
+
+<footer>
+  <p class="disclaimer">This site is for entertainment purposes only. 21+. If you or someone you know has a gambling problem, call 1-800-GAMBLER.</p>
+</footer>
+
+<script>
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var email = document.getElementById('email').value;
+  try { localStorage.setItem('ss_user', email); } catch (err) {}
+  window.location.href = 'tools.html';
+});
+</script>
+</body>
+</html>
